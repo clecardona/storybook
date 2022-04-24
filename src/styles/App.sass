@@ -1,0 +1,74 @@
+.App
+    background-color: #282c34
+    min-height: 100vh
+    padding: 2em
+    color: white
+    display: grid
+    grid-auto-flow: row
+    row-gap: 2em
+    align-content: flex-start
+
+header
+    h1
+        width: max-content
+        a
+            &:hover
+                text-decoration: underline
+
+nav
+    display: grid
+    column-gap: 1em
+    grid-auto-flow: column
+    justify-content: center
+    text-transform: capitalize
+
+    .nav-item
+        cursor: pointer
+        border: 1px solid #555
+        border-radius: .5em
+        background: #ffffff10
+        padding: .5em 1em
+        transition: .3s
+
+    .nav-item[aria-selected="true"]
+        background: #fff
+        color: #000
+        transition: .3s
+
+main
+    display: grid
+    grid-auto-flow: row
+    row-gap: 1.5em
+    align-content: flex-start
+section
+    position: relative
+    border: 1px solid #555
+    border-radius: 1em
+    padding: 2em
+    display: grid
+    grid-auto-flow: row
+    row-gap: .5em
+    align-content: flex-start
+
+    .title
+        position: absolute
+        top: -16px
+        left: 32px
+        background: #282c34
+        padding: 0 1em
+
+    article
+        padding: .3em 0
+
+        .subtitle
+            border-bottom: 1px solid #555
+            padding-bottom: .5em
+
+        .content
+            width: min-content
+            display: grid
+            justify-content: center
+            align-items: center
+            grid-auto-flow: column
+            gap: 1em
+            padding: 1em 0
