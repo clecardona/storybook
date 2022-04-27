@@ -1,25 +1,29 @@
 import { useEffect, useState } from "react"
 import Buttons from "./components/Buttons"
 import Modals from "./components/Modals"
+import Tooltip from "./components/Tooltips"
+import { useNav } from "./state/NavProvider"
 import "./styles/base.sass"
 
-const BUTTONS = "buttons"
-const MODALS = "modals"
-const ANYTHING = "anything"
+export const BUTTONS = "buttons"
+export const MODALS = "modals"
+export const ANYTHING = "anything"
 const tabs = [BUTTONS, MODALS, ANYTHING]
 
 function App() {
-  const [tab, setTab] = useState(tabs[0])
+  //@ts-ignore
+  const { currentTab, setCurrentTab } = useNav()
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [tab])
+  }, [currentTab])
 
-  const NavBar = tabs.map((item) => (
+  const NavBar = tabs.map((item, idx) => (
     <div
+      key={idx}
       className='nav-item'
-      aria-selected={item === tab}
-      onClick={() => setTab(item)}
+      aria-selected={item === currentTab}
+      onClick={() => setCurrentTab(item)}
     >
       <h4>{item}</h4>
     </div>
@@ -39,9 +43,14 @@ function App() {
           <br />© clecardona 2022
         </p>
         <nav>{NavBar}</nav>
-        {tab === BUTTONS && <Buttons />}
-        {tab === MODALS && <Modals />}
-        {tab === ANYTHING && <Modals />}
+        {currentTab === BUTTONS && <Buttons />}
+        {currentTab === MODALS && (
+          <>
+            <Modals />
+            <Tooltip />
+          </>
+        )}
+        {currentTab === ANYTHING && <Modals />}
       </main>
     </div>
   )

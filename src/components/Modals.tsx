@@ -38,7 +38,7 @@ const Modals = () => {
   }
 
   return (
-    <section className='buttons'>
+    <section className='modals'>
       <h2 className='title'>Modals</h2>
       <article className='centered'>
         <h3 className='subtitle'>Centered</h3>
