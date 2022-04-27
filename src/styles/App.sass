@@ -16,16 +16,24 @@ header
                 text-decoration: underline
 
 nav
-    display: grid
-    column-gap: 1em
-    grid-auto-flow: column
+    display: flex
+
     justify-content: center
     text-transform: capitalize
+    border-radius: .5em
+    overflow: hidden
+
+    .nav-item:first-child
+        border-radius: .5em 0 0 .5em
+
+    .nav-item:last-child
+        border-radius: 0 .5em .5em 0
 
     .nav-item
         cursor: pointer
         border: 1px solid #555
-        border-radius: .5em
+        margin-right: -1px
+
         background: #ffffff10
         padding: .5em 1em
         transition: .3s

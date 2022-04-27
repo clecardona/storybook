@@ -8,24 +8,56 @@ const Buttons = () => {
       <article className="primary">
         <h3 className="subtitle">Primary</h3>
         <div className="content">
-          <Button text="Button S" />
-          <Button text="Button M" size="md" />
-          <Button text="Button L" size="lg" />
+          <Button text="Button S" onClick={() => alert("This is a Button")} />
+          <Button
+            text="Button M"
+            size="md"
+            onClick={() => alert("This is a Button")}
+          />
+          <Button
+            text="Button L"
+            size="lg"
+            onClick={() => alert("This is a Button")}
+          />
         </div>
       </article>
       <article className="primary-icon">
         <h3 className="subtitle">Primary with icon</h3>
         <div className="content">
-          <Button text="Icon left" size="md" IconLeft={<FaBeer />} />
-          <Button text="Icon right" size="md" IconRight={<FaBeer />} />
+          <Button
+            text="Icon left"
+            size="md"
+            IconLeft={<FaBeer />}
+            onClick={() => alert("This is a Button")}
+          />
+          <Button
+            text="Icon right"
+            size="md"
+            IconRight={<FaBeer />}
+            onClick={() => alert("This is a Button")}
+          />
         </div>
       </article>
       <article className="ghost">
         <h3 className="subtitle">Ghost</h3>
         <div className="content">
-          <Button text="Button S" variant="ghost" />
-          <Button text="Button M" size="md" variant="ghost" />
-          <Button text="Button L" size="lg" variant="ghost" />
+          <Button
+            text="Button S"
+            variant="ghost"
+            onClick={() => alert("This is a Button")}
+          />
+          <Button
+            text="Button M"
+            size="md"
+            variant="ghost"
+            onClick={() => alert("This is a Button")}
+          />
+          <Button
+            text="Button L"
+            size="lg"
+            variant="ghost"
+            onClick={() => alert("This is a Button")}
+          />
         </div>
       </article>
       <article className="ghost-icon">
@@ -33,12 +65,14 @@ const Buttons = () => {
         <div className="content">
           <Button
             text="Icon left"
+            onClick={() => alert("This is a Button")}
             size="md"
             IconLeft={<FaBeer />}
             variant="ghost"
           />
           <Button
             text="Icon right"
+            onClick={() => alert("This is a Button")}
             size="md"
             IconRight={<FaBeer />}
             variant="ghost"
