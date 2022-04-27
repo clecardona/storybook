@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Buttons from "./components/Buttons"
 import Modals from "./components/Modals"
 import Tooltip from "./components/Tooltips"

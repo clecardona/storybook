@@ -1,10 +1,4 @@
-import {
-  createContext,
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useState,
-} from "react"
+import { createContext, useContext, useState } from "react"
 import { BUTTONS } from "../App"
 
 interface AppContextInterface {
